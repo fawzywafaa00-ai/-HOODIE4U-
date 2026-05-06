@@ -1,0 +1,370 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --burgundy: #800020;
+    --charcoal: #2D2D2D;
+    --bg-light: #FDF9F6;
+    --white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+}
+
+/* Header & Nav */
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--charcoal);
+    margin: 0 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.login-link {
+    color: var(--burgundy) !important;
+    border: 1px solid var(--burgundy);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* --- Products Grid Updated --- */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    /* هذا السطر سيجعل المنتجات تظهر بجانب بعضها وتصغر تلقائياً */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* التنسيق الجديد لكارت المنتج ليتناسب مع HOODIE4U */
+.product-item {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.product-item:hover {
+    transform: translateY(-8px); /* حركة خفيفة عند الوقوف بالماوس */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-img-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* يمنع تشوه الصورة ويجعلها متناسقة */
+}
+
+.product-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin: 15px 0 5px;
+    color: var(--charcoal);
+}
+
+.price {
+    font-weight: 600;
+    color: var(--burgundy); /* السعر بلون البرغندي الخاص ببراندك */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background: var(--charcoal);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--burgundy); /* يتغير للبرغندي عند التحويم */
+}
+
+.add-to-cart i {
+    margin-right: 8px;
+}
+
+/* --- Login Modal Styling --- */
+.modal {
+    display: none; /* مخفي افتراضياً */
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.registration-form {
+    background: var(--white);
+    width: 90%;
+    max-width: 700px;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+.form-title {
+    color: var(--burgundy);
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.back-link {
+    color: var(--burgundy);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: var(--burgundy);
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    background: var(--burgundy);
+    color: white;
+    flex: 2;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background: #bdc3c7;
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* About Finale Section Styling */
+.about-finale {
+    padding: 100px 0;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    color: #800020; /* Burgundy Color */
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444444;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.about-badges {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    font-weight: 600;
+    color: #800020;
+    font-size: 1.1rem;
+}
+
+
+.reviews-section-wrapper {
+    background-color: #ffffff; 
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* العنوان الرئيسي باللون البرجاندي */
+.section-heading {
+    font-size: 2.2rem;
+    color: #800020; /* لون برجاندي ملكي */
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* تصميم البوكس - جعلناه أنعم بحواف دائرية وظل رقيق */
+.review-box {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 20px; /* حواف دائرية ناعمة نفس الصورة الأولى */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* ظل ناعم جداً */
+    width: 320px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.review-box:hover {
+    transform: translateY(-8px);
+}
+
+/* النجوم باللون الأصفر الذهبي */
+.stars {
+    color: #FFD700; /* أصفر ذهبي صريح */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* الكلام الصغير (التعليق) باللون الرمادي الفاتح أو الأسود الخفيف */
+.comment {
+    color: #777; /* رمادي فاتح واضح للقراءة */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* اسم الشخص باللون البرجاندي ليبرز */
+.customer {
+    color: #800020; /* برجاندي مطابق للعنوان */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Contact Us Section Styling */
+.contact-section {
+    padding: 80px 0;
+    background-color: #FDF9F6; /* نفس لون خلفية الموقع الهادئ */
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Playfair Display', serif;
+    color: #800020;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    display: inline-block;
+    border-bottom: 3px solid #800020;
+    padding-bottom: 5px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2D2D2D;
+}
+
+/* ألوان الأيقونات حسب الصورة */
+.contact-item i {
+    font-size: 2rem;
+}
+
+.whatsapp-icon { color: #25D366; }
+.instagram-icon { color: #E1306C; }
+.telegram-icon { color: #0088cc; }
+

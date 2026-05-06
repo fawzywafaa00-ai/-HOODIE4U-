@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOODIE4U | Official Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="home">
+        <div class="logo">HOODIE4U</div>
+        <nav>
+            <a href="#Top"><i class="fa-solid fa-house"></i> HOME</a>
+            <a href="#product-grid">COLLECTIONS</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#contact">CONTACT US</a>
+            <a href="#" class="login-link" id="loginBtn"><i class="fa-solid fa-user"></i> LOGIN</a>
+        </nav>
+        <div class="cart">Cart 🛒 <span id="cart-count">(0)</span></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>HOODIE4U</h1>
+            <p>Your ultimate destination for vibrant comfort.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="grid" id="product-grid">
+            <!---1product-->
+            <div class = "product-item">
+                <div class = "product-img-container">
+                    <img src="img/image1.jpg" alt="Cloud Wings">
+                </div>
+                <div class="product-info">
+                    <h3>Cloud Wings </h3>
+                    <p class="price"> 450 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Cloud Wings', 450)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product2-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image2.jpg" alt="Brownie Hub">
+                </div>
+                <div class="product-info">
+                    <h3>Brownie Hub </h3>
+                    <p class="price">500 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Brownie Hub', 500)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product3-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image3.jpg" alt="Soft Rebel">
+                </div>
+                <div class="product-info">
+                    <h3>Soft Rebel</h3>
+                    <p class="price">350 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Soft Rebel', 350)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product4-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image4.jpg" alt="Ace Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Ace Hoodie </h3>
+                    <p class="price">550 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Ace Hoodie', 550)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product5-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image5.jpg" alt="Vanilla Street">
+                </div>
+                <div class="product-info">
+                    <h3>Vanilla Street </h3>
+                    <p class="price">550 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Vanilla Street', 550)">
+                       Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product6-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image6.jpg" alt="Mon Chéri">
+                </div>
+                <div class="product-info">
+                    <h3>Mon Chéri </h3>
+                    <p class="price">850 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Mon Chéri', 850)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product7-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image7.jpg" alt="Little Love">
+                </div>
+                <div class="product-info">
+                    <h3>Little Love </h3>
+                    <p class="price">500 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Little Love', 500)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product8-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image8.jpg" alt="Mindful Green">
+                </div>
+                <div class="product-info">
+                    <h3>Mindful Green</h3>
+                    <p class="price">750 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Mindful Green', 750)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product9-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image9.jpg" alt="Soft Muse">
+                </div>
+                <div class="product-info">
+                    <h3>Soft Muse</h3>
+                    <p class="price">600 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Soft Muse', 600)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product10-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image10.jpg" alt="Crimson Glow">
+                </div>
+                <div class="product-info">
+                    <h3>Crimson Glow</h3>
+                    <p class="price">500 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Crimson Glow', 500)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product11-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image11.jpg" alt="Polo Soul">
+                </div>
+                <div class="product-info">
+                    <h3>Polo Soul</h3>
+                    <p class="price">950 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Polo Soul', 950)">
+                       Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!---product12-->
+            <div class="product-item">
+                <div class="product-img-container">
+                    <img src="img/image12.jpg" alt="Houston Breeze">
+                </div>
+                <div class="product-info">
+                    <h3>Houston Breeze</h3>
+                    <p class="price">650 EGP</p>
+                    <button class="add-to-cart" onclick="addToCart('Houston Breeze', 650)">
+                       Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content registration-form">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <a href="#" class="back-link" onclick="closeModal()">← Back to home page</a>
+            <h2 class="form-title">Login Form</h2>
+            
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="Enter first name">
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Enter last name">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="example@mail.com">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="********">
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="01xxxxxxxxx">
+                </div>
+                <div class="input-group">
+                    <label>Full Address</label>
+                    <input type="text" placeholder="City, Street, Building">
+                </div>
+            </div>
+            
+            <div class="input-group full-width">
+                <label>Date of Birth</label>
+                <input type="date">
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-submit">Login</button>
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <section class="about-finale" id="about">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="about-title">Your Comfort, Our Canvas.</h2>
+            <p class="about-text">
+                At <strong>HOODIE4U</strong>, we believe that true beauty starts with feeling confident in what you wear. 
+                We don’t just design hoodies; we craft your favorite everyday moments.
+            </p>
+            <p class="about-text">
+                Each piece in our collection is a blend of premium fabrics and contemporary designs, 
+                tailored to make you feel empowered, cozy, and uniquely you.
+            </p>
+            <div class="about-badges">
+                <span>Quality First</span>
+                <span>Vibrant Styles</span>
+                <span>Made with Love</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="reviews-section-wrapper">
+    <h2 class="section-heading">What Our Customers Say</h2>
+    <div class="reviews-grid">
+        <div class="review-box">
+            <div class="stars">★★★★★</div>
+            <p class="comment">"Best hoodie I've ever owned! So soft and comfortable."</p>
+            <p class="customer">- Mariam E.</p>
+        </div>
+        <div class="review-box">
+            <div class="stars">★★★★★</div>
+            <p class="comment">"Perfect fit and quality. Will definitely buy more colors!"</p>
+            <p class="customer">- Mike D.</p>
+        </div>
+        <div class="review-box">
+            <div class="stars">★★★★★</div>
+            <p class="comment">"Incredibly cozy. Feels like wearing a cloud!"</p>
+            <p class="customer">- Emily R.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-section" id="contact">
+    <div class="container">
+        <h2 class="contact-title">Contact Us</h2>
+        <div class="contact-methods">
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                <span>Whatsapp: 01555629974</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-instagram instagram-icon"></i>
+                <span>Instagram: @Hoodie4u</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-telegram telegram-icon"></i>
+                <span>Telegram: Hoodie4u Official</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
